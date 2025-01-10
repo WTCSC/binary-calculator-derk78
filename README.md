@@ -1,6 +1,9 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17648177)
 # Binary Calculator
 
+This is binary calcultor that takes 3 variables bin1, bin2, and an operator.
+The calculator takes 2 binary inputs (bin1 & bin2) and converts them into decimals to do the operation and then converts the final output back into binary and returns it.
+
 <!--
 
 The following requirements must be met to receive full credit on this assignment. The calculator must handle binary arithmetic operations accurately while following proper error handling procedures and output formatting guidelines.
