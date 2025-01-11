@@ -3,7 +3,7 @@ def binary_calculator(bin1, bin2, operator):
         for char in bin1 + bin2:
             if char != "1" and char != "0":
                 return "Error"
-        #Turn the first binary number into a decimal by going through the numbers and for every 1 replace it with its base 10 counterpart.
+        #Turn the first binary number, represented by bin1, into a decimal by going through the numbers and for every 1 replace it with its base 10 counterpart.
         num1 = 0 
         if bin1[0] == "1":
             num1 += 128
@@ -22,7 +22,7 @@ def binary_calculator(bin1, bin2, operator):
         if bin1[7] == "1":
             num1 += 1 
 
-        #Turn the second binary number into a decimal using the same process.
+        #Turn the second binary number, represented by bin2, into a decimal using the same process.
         num2 = 0 
         if bin2[0] == "1":
             num2 += 128
@@ -48,15 +48,20 @@ def binary_calculator(bin1, bin2, operator):
             decimal = num1 - num2
         elif operator == "*":
             decimal = num1 * num2
+
+        #Here we also want to return the not a number error incase the divisor is a 0.
         elif operator == "/":
             if num2 == 0: 
-                return"NaN"
+                return "NaN"
             decimal = num1 // num2
-            
-        #Finally we convert the decimal we got after the equation back into binary for the final output.
-        #We do this by taking the number and depending on whether it's greater or equal to 128, or 64, and so on we add a one or a zero to the empty binary string.
+
+        #In this if statement we also check if the decimal is greater than 256 or lower than 0 and if it is we return "Overflow".
         if decimal > 255 or decimal < 0:
             return("Overflow")
+        
+        #In the section below we convert the decimal we got after the equation back into binary for the final output.
+        #We do this by taking the number and depending on whether it's greater or equal to 128, or 64, and so on we add a one or a zero to the empty `output` string.
+        #Then we subtract the number that the decimal is equal or greater to and repeat this process until there are no more numbers that the "decimal" variable is equal to or greater than.
         output = ""
         if decimal >= 128:
             output += "1"
@@ -108,5 +113,5 @@ def binary_calculator(bin1, bin2, operator):
             
         return output
     
-result = binary_calculator("01010110", "00010011", "+")
+result = binary_calculator("10110", "10011", "+")
 print(result)
