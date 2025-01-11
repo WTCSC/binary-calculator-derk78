@@ -3,13 +3,13 @@
 
 This binary calculator takes 3 variables `bin1`, `bin2`, and an `operator`.
 
-**Input**
+## Input
  - only accepts the operator variable as operands such as "+" or "-".
  - It can only handle 8-bit numbers.
-**What it does**
+## What it does
  - Manually converts binary into decimals and then back into binary for the final output.
  - Handles multiplication, division, subtraction, and addition.
-**Error Handling**
+## Error Handling
  - The calculator will return an "Error" if anything other than a "1" or a "0" is input.
  - Additionally if a number is larger than 256 or smaller 0 it will return "Overflow.
 
