@@ -113,5 +113,5 @@ def binary_calculator(bin1, bin2, operator):
             
         return output
     
-result = binary_calculator("10110", "10011", "+")
+result = binary_calculator("10110000", "10011000", "+")
 print(result)
